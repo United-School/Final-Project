@@ -1,0 +1,124 @@
+body{
+    padding: 0%;
+    margin: 0;
+    background-color:rosybrown;
+}
+
+.main-header{
+    height: 100px; 
+    width: 100%; 
+    /* font-size: 4.5em;  */
+    font-family: 'Cinzel', serif; 
+    color: #ff9900;
+    background-color: black;
+    /* overflow: hidden; */
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.brand-logo
+{
+    max-width: 100px;
+    /* background-color: aquamarine; */
+}
+
+.brand-logo img{
+    height: 100px; 
+    width: 100px;
+}
+
+.main-heading{
+    max-width: 250px;
+    /* background-color: aqua; */
+}
+
+.main-heading p{
+    font-size: 2.5rem;
+    margin-left: 0;
+    justify-content: center;
+}
+
+.profile-name p{
+    display: flexbox;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.form-container{
+    margin: 0px 100px;
+    background-color: rgba(55, 55, 59, 0.863);
+    padding: 25px;
+}
+
+.form-content{
+    /* display: flex;
+    justify-content: start; */
+    padding: 10px 10px;
+    align-items: center;
+}
+
+.form-group
+{
+    display: flex;
+    flex-direction: row;
+}
+.form-group label{
+    flex: none;
+   display: block;
+   width: 125px;
+   font-weight: bold;
+   font-size: 1em;
+}
+.form-group .input-control {
+    flex: 1 1 auto;
+   display: block;
+   margin-bottom: 10px;
+   margin-right: 8px;
+   padding: 4px;
+   margin-top: -4px;
+}
+
+.search{
+    margin: 0px 100px;
+    background-color:rgb(172, 172, 25);
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.search label{
+    flex: none;
+   display: block;
+   width: 160px;
+   font-weight: bold;
+   font-size: 1em;
+}
+.search input{
+    display: block;
+    width: 560px;
+    flex: none;
+    margin-left: 10px;
+    margin-bottom: 7px;
+   margin-right: 8px;
+   padding: 4px;
+   margin-top: -4px;
+}
+
+.search button{
+    display: block;
+    border: 1px solid black;
+    font-size: 25px;
+    padding: 3px;    
+}
+
+button {
+    padding: 5px 15px;
+    margin: 5px;
+    min-width: 100px
+  }
