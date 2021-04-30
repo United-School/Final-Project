@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+        *{
+            margin: 0; 
+            padding: 0;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        body{
+            background-image: url('../static/images/background-editor.jpg');
+        }
+
+
+        #contentField{
+            border: 1px solid black;
+            border-radius: 3px;
+            width: 100%;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5" style="background-color:ghostwhite; border: 2px solid black;">
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <fieldset class="mt-4 p-2" style="border: 1px solid black;">
+                   <button onclick="document.execCommand('italic',false,null);"> <i class="fa fa-italic fa-lg btn"></i>
+                   </button>
+                   <button onclick="document.execCommand( 'bold',false,null);"> <i class="fa fa-bold fa-lg btn"></i>
+                   </button>
+                   <button onclick="document.execCommand( 'underline',false,null);"> <i class="fa fa-underline fa-lg btn"></i>
+                   </button>
+                   <button onclick="document.execCommand( 'insertOrderedList',false,null);"> <i class="fa fa-list-ol fa-lg btn"></i>
+                   </button>
+                   <button onclick="document.execCommand( 'insertUnOrderedList',false,null);"> <i class="fa fa-list-ul fa-lg btn"></i>
+                   </button>
+                   <select id="input-font" class="input"  onchange="changeFont (this);">
+                    <option value="Arial">Arial</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Sans serif">Sans serif</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Palatino">Palatino</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                  </select>          
+                </fieldset>
+            </div>
+            <form method="post" action={{url_for('uploader')}} enctype="multipart/form-data">
+            <div class="col-12 col-sm-12 mt-3">
+                <div class="form-group row" style="font-size: 1.5em;">
+                    <label for="title" class="col-form-label col-12">Title:</label>
+                    <div class="col">
+                        <fieldset>
+                            <input type="text" name="title">
+                            </input>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="form-group row" style="font-size: 1.3em;">
+                    <label for="content" class="col-form-label col-12">Content:</label>
+                    <div class="col">
+                       
+                        <input type="text" name="content" class="form control mb-3 p-2" style="overflow:scroll;font-size:18pt;height:200px;width:400px;">
+                        </input>
+                        <br>
+                        <input type="file" name="filename" id="myfile" >
+                        <input type="submit" name="submit" class="btn btn-success mt-1 offset-1">
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- footer -->
+<p class="text-center bg-dark text-white">@copyright UnitedSchools</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+</body>
+</html>
